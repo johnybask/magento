@@ -1,6 +1,6 @@
 <?php
 
-namespace Sobol\IsInStockModule\Controller\Index;
+namespace Sobol\GetQtyModule\Controller\Index;
 
 
 use Magento\Framework\App\Action\Action;
@@ -31,10 +31,6 @@ class Index extends Action
     public function execute()
     {
         $page = $this->_pageFactory->create();
-
-        /** @var Template $block */
-        $block = $page->getLayout()->getBlock('isinstockpage');
-        $block->setData('custom_parameter', $this->getRequest()->getParam('custom_param'));
 
         return $page;
     }

@@ -3,7 +3,7 @@
     <body>
         <referenceContainer name="product.info.main">
             <container before="product.info.price">
-                <block class="Sobol\IsInStockModule\Block\IsInStock" name="isinstock" template="Sobol_IsInStockModule::isinstock.phtml" />
+                <block class="Sobol\GetQtyModule\Block\GetQty" name="getqty" template="Sobol_GetQtyModule::getqty.phtml" />
             </container>
         </referenceContainer>
     </body>

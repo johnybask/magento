@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Sobol\IsInStockModule\Block;
+namespace Sobol\GetQtyModule\Block;
 
 use Magento\Framework\View\Element\Template;
 
-class IsInStock extends Template
+class GetQty extends Template
 {
     protected $_registry;
     protected $_stockRegistry;
@@ -22,11 +22,7 @@ class IsInStock extends Template
         parent::__construct($context, $data);
     }
 
-    public function IsInStockPage() {
-        return "Is in stock module - quantity: ";
-    }
-
-    public function IsInStock() {
+    public function getQty() {
         $productStock = $this->_stockRegistry->getStockItem($this->getProduct()->getId());
         return $productStock->getQty();
     }
