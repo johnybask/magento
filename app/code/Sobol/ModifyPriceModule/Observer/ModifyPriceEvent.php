@@ -14,10 +14,8 @@ class ModifyPriceEvent implements ObserverInterface
         foreach ($productsCollection->getItems() as $key => $product) {
             $defaultName = $product->getName();
             $price = $product->getPrice();
-            $modifiedName = "";
 
-            if($price > 2000) $modifiedName = $defaultName." too expensive!";
-            if($price < 2000) $modifiedName = $defaultName." too cheap!";
+            $modifiedName = ($price > 2000) ? $defaultName." too expensive!" : $defaultName." too cheap!";
 
             $product->setName($modifiedName);
         }

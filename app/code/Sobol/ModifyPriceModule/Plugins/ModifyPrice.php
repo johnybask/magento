@@ -10,9 +10,6 @@ class ModifyPrice
     {
         $price = $subject->getPrice();
 
-        if($price > 2000) return $result." too expensive!";
-        if($price < 2000) return $result." too cheap!";
-
-        return $result;
+        return ($price > 2000) ? $result." too expensive!" : $result." too cheap!";
     }
 }
